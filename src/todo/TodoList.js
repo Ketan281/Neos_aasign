@@ -4,11 +4,12 @@ import './TodoList.css'
 import NewTodoForm from './NewTodoForm';
 import { connect } from 'react-redux';
 import { removeTodo ,markToDoAsCompleted} from './actions';
-
+import { Example } from './Counter';
 const TodoList = ({ todos =[ ] , onRemovePressed,onCompletedPressed }) => (
 
     <div className= "list-wrapper">
         <NewTodoForm/>
+        <Example/>
         {todos.map(todo => <TodoListItem todo={todo} 
         onRemovePressed ={onRemovePressed}
         onCompletedPressed ={onCompletedPressed}
